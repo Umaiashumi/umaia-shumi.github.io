@@ -9,52 +9,62 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f7fb;
+  background: #f7f6f2; /* soft warm background */
+  color: #333;
 }
 
 /* HEADER */
 header {
-  background: #0d1b2a;
-  color: white;
-  padding: 15px 30px;
+  background: #ffffff;
+  color: #2c3e50;
+  padding: 18px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #eee;
 }
 
-/* LEFT LOGO */
+/* LOGO (BOLD NAME) */
 .logo {
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #2c3e50;
 }
 
 /* NAV */
 nav {
   display: flex;
-  gap: 15px;
+  gap: 18px;
 }
 
 nav a {
-  color: white;
+  color: #2c3e50;
   text-decoration: none;
   font-size: 14px;
+  font-weight: 500;
 }
 
 nav a:hover {
-  color: #00b4d8;
+  color: #8d7b68;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #00b4d8, #90e0ef);
-  color: white;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #f5e6ca, #dfe9f3);
+  color: #2c3e50;
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
 /* SECTION */
 .section {
-  padding: 40px 20px;
+  padding: 45px 20px;
   text-align: center;
 }
 
@@ -67,35 +77,41 @@ nav a:hover {
 }
 
 .card {
-  background: white;
+  background: #ffffff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 /* BUTTON */
 .btn {
   display: inline-block;
   margin-top: 10px;
-  padding: 10px 15px;
-  background: #0077b6;
+  padding: 10px 14px;
+  background: #8d7b68;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .btn:hover {
-  background: #023e8a;
+  background: #6f5e4d;
 }
 
 /* CONTACT */
 .contact {
-  background: #e9ecef;
+  background: #ffffff;
+  border-top: 1px solid #eee;
 }
 
 /* FOOTER */
 footer {
-  background: #0d1b2a;
+  background: #2c3e50;
   color: white;
   text-align: center;
   padding: 15px;
@@ -118,8 +134,8 @@ footer {
 
 <!-- HERO -->
 <div class="hero" id="home">
-  <h2>Premium Korean Cosmetics • Fashion • Art</h2>
-  <p>Beauty, Creativity & Style in one place</p>
+  <h2>Beauty • Fashion • Art</h2>
+  <p>Soft elegance, Korean cosmetics, fashion & handmade creativity</p>
 </div>
 
 <!-- PRODUCTS -->
@@ -130,26 +146,26 @@ footer {
 
     <div class="card">
       <h3>Korean Cosmetics</h3>
-      <p>Premium skincare products</p>
+      <p>Gentle skincare & beauty essentials</p>
       <a class="btn" href="https://wa.me/8801406749267?text=I want Korean Cosmetics">Order</a>
     </div>
 
     <div class="card">
-      <h3>Fashion Clothes</h3>
-      <p>Trendy modern outfits</p>
-      <a class="btn" href="https://wa.me/8801406749267?text=I want Fashion Clothes">Order</a>
+      <h3>Fashion Clothing</h3>
+      <p>Elegant and modern outfits</p>
+      <a class="btn" href="https://wa.me/8801406749267?text=I want Fashion Clothing">Order</a>
     </div>
 
     <div class="card">
-      <h3>Home Decor Art</h3>
-      <p>Beautiful handmade decoration</p>
-      <a class="btn" href="https://wa.me/8801406749267?text=I want Home Decor Art">Order</a>
+      <h3>Home Decor</h3>
+      <p>Soft handmade artistic decoration</p>
+      <a class="btn" href="https://wa.me/8801406749267?text=I want Home Decor">Order</a>
     </div>
 
     <div class="card">
       <h3>Painting & Calligraphy</h3>
-      <p>Custom artistic services</p>
-      <a class="btn" href="https://wa.me/8801406749267?text=I want Painting or Calligraphy">Order</a>
+      <p>Custom artistic creations</p>
+      <a class="btn" href="https://wa.me/8801406749267?text=I want Painting & Calligraphy">Order</a>
     </div>
 
   </div>
@@ -159,9 +175,9 @@ footer {
 <section class="section" id="about">
   <h2>About Us</h2>
   <p>
-    Founded in 2022, Artistic World offers Korean cosmetics, fashion clothing,
-    home decor, and custom art services including painting and calligraphy.
-    We focus on creativity, quality, and customer satisfaction.
+    Founded in 2022, Artistic World brings together Korean beauty, fashion,
+    and handcrafted art. We focus on soft elegance, creativity, and quality
+    products designed for modern lifestyle and personal expression.
   </p>
 </section>
 
