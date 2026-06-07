@@ -1,204 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Artistic World</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f7fb;
-  color: #333;
-}
-
-/* HEADER */
+/* ===== HEADER LAYOUT ===== */
 header {
-  background: #0d1b2a;
-  color: white;
-  padding: 15px 30px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 1st row: Artistic World */
+.top-row {
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
+  padding: 12px 20px;
 }
 
-/* LOGO (UPDATED PROFESSIONAL COLOR) */
-.logo {
-  font-size: 24px;
-  font-weight: 800;
-  color: #b08968;
-  letter-spacing: 1px;
-}
-
-/* NAV */
-nav {
-  display: flex;
-  gap: 18px;
-}
-
-nav a {
+/* Artistic World styling ONLY */
+.brand {
+  background-color: #4a90e2; /* change color here */
   color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: #00b4d8;
-}
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 70px 20px;
-  background: linear-gradient(135deg, #f5e6ca, #dfe9f3);
-  color: #2c3e50;
-}
-
-.hero h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-/* SECTION */
-.section {
-  padding: 45px 20px;
-  text-align: center;
-}
-
-/* PRODUCTS */
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 14px;
-  background: #8d7b68;
-  color: white;
-  text-decoration: none;
+  padding: 6px 14px;
   border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
 }
 
-.btn:hover {
-  background: #6f5e4d;
+/* 2nd row: menu */
+.bottom-row {
+  display: flex;
+  gap: 25px;
+  padding: 10px 20px;
 }
 
-/* CONTACT */
-.contact {
-  background: #ffffff;
-  border-top: 1px solid #eee;
+/* menu links */
+.bottom-row a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
 }
 
-/* FOOTER */
-footer {
-  background: #0d1b2a;
-  color: white;
-  text-align: center;
-  padding: 15px;
+/* optional hover effect */
+.bottom-row a:hover {
+  color: #4a90e2;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-  <div class="logo">Artistic World</div>
-  <nav>
+
+  <!-- 1st ROW -->
+  <div class="top-row">
+    <div class="brand">Artistic World</div>
+  </div>
+
+  <!-- 2nd ROW -->
+  <nav class="bottom-row">
     <a href="#home">Home</a>
-    <a href="#products">Shop</a>
     <a href="#about">About</a>
+    <a href="#shop">Shop</a>
     <a href="#contact">Contact</a>
   </nav>
+
 </header>
-
-<!-- HERO -->
-<div class="hero" id="home">
-  <h2>Beauty • Fashion • Art</h2>
-  <p>Soft elegance, Korean cosmetics, fashion & handmade creativity</p>
-</div>
-
-<!-- PRODUCTS -->
-<section class="section" id="products">
-  <h2>Our Products</h2>
-
-  <div class="products">
-
-    <div class="card">
-      <h3>Korean Cosmetics</h3>
-      <p>Gentle skincare & beauty essentials</p>
-      <a class="btn" href="https://wa.me/8801406749267?text=I want Korean Cosmetics">Order</a>
-    </div>
-
-    <div class="card">
-      <h3>Fashion Clothing</h3>
-      <p>Elegant and modern outfits</p>
-      <a class="btn" href="https://wa.me/8801406749267?text=I want Fashion Clothing">Order</a>
-    </div>
-
-    <div class="card">
-      <h3>Home Decor</h3>
-      <p>Soft handmade artistic decoration</p>
-      <a class="btn" href="https://wa.me/8801406749267?text=I want Home Decor">Order</a>
-    </div>
-
-    <div class="card">
-      <h3>Painting & Calligraphy</h3>
-      <p>Custom artistic creations</p>
-      <a class="btn" href="https://wa.me/8801406749267?text=I want Painting & Calligraphy">Order</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- ABOUT (UPDATED CLEAN VERSION) -->
-<section class="section" id="about">
-  <h2>About</h2>
-
-  <div style="max-width:800px;margin:auto;text-align:left;line-height:1.6;font-size:16px;color:#333;">
-
-    <p><strong>Founded in 2022</strong>, Artistic World brings together creativity, culture, and quality in one place.</p>
-
-    <p>We offer Korean cosmetics, stylish clothing, and handmade home décor that blend modern trends with traditional artistry.</p>
-
-    <p>We also provide custom painting and personalized calligraphy services for portraits, gifts, and home decoration.</p>
-
-    <p>Every product and artwork is carefully selected or created with focus on quality, detail, and customer satisfaction.</p>
-
-    <p><strong>Discover style, beauty, and creativity with us.</strong></p>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section contact" id="contact">
-  <h2>Contact</h2>
-  <p>📞 +88 01406 749267</p>
-  <p>📧 umaiashumi27@gmail.com</p>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Artistic World</p>
-</footer>
 
 </body>
 </html>
