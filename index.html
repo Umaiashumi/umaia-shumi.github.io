@@ -6,111 +6,137 @@
 <title>Artistic World</title>
 
 <style>
-/* ===== GLOBAL STYLE ===== */
+
+/* ===== BASE ===== */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f0f0f;
-    color: #ffffff;
-    line-height: 1.6;
+    font-family: "Arial", sans-serif;
+    background: #f4f6f8;
+    color: #2b2b2b;
 }
 
-/* ===== HEADER ===== */
+/* ===== TOP NAV ===== */
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0,0,0,0.85);
-    padding: 15px 40px;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(12px);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding: 14px 40px;
     z-index: 1000;
-    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e8e8e8;
 }
 
 header h1 {
-    font-size: 20px;
-    color: #7cf7ff;
-    letter-spacing: 2px;
+    font-size: 18px;
+    color: #3b5bdb;
+    letter-spacing: 1px;
 }
 
 nav a {
-    color: white;
-    margin-left: 20px;
+    margin-left: 18px;
     text-decoration: none;
+    color: #444;
     font-size: 14px;
 }
 
 nav a:hover {
-    color: #7cf7ff;
+    color: #3b5bdb;
 }
 
-/* ===== SECTIONS ===== */
-section {
-    padding: 120px 10%;
-}
-
-/* HERO */
+/* ===== LAYER 1 (HERO) ===== */
 .hero {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, #111, #1b1b1b);
+
+    background: linear-gradient(135deg, #e9f0ff, #f7f9fc);
 }
 
 .hero h2 {
-    font-size: 48px;
-    color: #ffffff;
+    font-size: 52px;
+    color: #1f2a44;
+    margin: 0;
 }
 
 .hero p {
-    color: #aaa;
     max-width: 600px;
+    color: #6b7280;
+    margin-top: 12px;
+}
+
+/* soft glow line */
+.hero::after {
+    content: "";
+    width: 120px;
+    height: 2px;
+    background: #3b5bdb;
+    margin-top: 25px;
+}
+
+/* ===== LAYER 2 CONTAINER ===== */
+.layer2 {
+    background: #ffffff;
+    padding: 80px 10%;
 }
 
 /* SECTION TITLES */
-h2.section-title {
-    font-size: 28px;
+.section-title {
+    font-size: 26px;
+    color: #1f2a44;
     margin-bottom: 20px;
-    color: #7cf7ff;
 }
 
-/* GRID */
+/* GRID CARDS */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
 }
 
 .card {
-    background: #1a1a1a;
+    background: #f8fafc;
     padding: 20px;
-    border-radius: 12px;
-    transition: 0.3s;
+    border-radius: 14px;
+    border: 1px solid #eaeaea;
+    transition: 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    background: #222;
+    transform: translateY(-6px);
+    background: #eef3ff;
+}
+
+/* ABOUT BOX */
+.about {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #eaeaea;
+    color: #555;
 }
 
 /* CONTACT */
 .contact {
-    background: #111;
-    border-radius: 12px;
-    padding: 40px;
+    background: #eef3ff;
+    padding: 30px;
+    border-radius: 14px;
+    color: #2b2b2b;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 30px;
-    background: black;
+    padding: 25px;
+    background: #f1f5f9;
     color: #777;
 }
+
 </style>
 </head>
 
@@ -119,60 +145,69 @@ footer {
 <header>
     <h1>Artistic World</h1>
     <nav>
-        <a href="#art">Art</a>
         <a href="#about">About</a>
         <a href="#shop">Shop</a>
+        <a href="#features">Features</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
-<!-- HERO -->
+<!-- ===== LAYER 1 ===== -->
 <section class="hero">
-    <div>
-        <h2>Welcome to Artistic World</h2>
-        <p>A place where creativity, culture, and quality come together in one space.</p>
-    </div>
+    <h2>Artistic World</h2>
+    <p>A calm space where creativity, culture, and design come together in harmony.</p>
 </section>
 
-<!-- ART -->
-<section id="art">
-    <h2 class="section-title">Artistic World</h2>
-    <div class="grid">
-        <div class="card">Artwork 1</div>
-        <div class="card">Artwork 2</div>
-        <div class="card">Artwork 3</div>
-    </div>
-</section>
+<!-- ===== LAYER 2 ===== -->
+<div class="layer2">
 
-<!-- ABOUT -->
-<section id="about">
-    <h2 class="section-title">About</h2>
-    <div class="card">
-        Founded in 2022, Artistic World brings creativity, culture, and quality together. We specialize in clothing, Korean cosmetics, and unique artistic products.
-    </div>
-</section>
+    <!-- ABOUT -->
+    <section id="about">
+        <h2 class="section-title">About</h2>
+        <div class="about">
+            Founded in 2022, Artistic World brings together modern creativity, lifestyle products, and cultural expression in one place.
+        </div>
+    </section>
 
-<!-- SHOP -->
-<section id="shop">
-    <h2 class="section-title">Shop</h2>
-    <div class="grid">
-        <div class="card">Clothing</div>
-        <div class="card">Cosmetics</div>
-        <div class="card">Accessories</div>
-    </div>
-</section>
+    <br>
 
-<!-- CONTACT -->
-<section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <div class="contact">
-        Email: your@email.com <br>
-        Phone: +82-000-0000
-    </div>
-</section>
+    <!-- SHOP -->
+    <section id="shop">
+        <h2 class="section-title">Shop</h2>
+        <div class="grid">
+            <div class="card">Clothing Collection</div>
+            <div class="card">Korean Cosmetics</div>
+            <div class="card">Accessories</div>
+        </div>
+    </section>
+
+    <br>
+
+    <!-- FEATURES -->
+    <section id="features">
+        <h2 class="section-title">Features</h2>
+        <div class="grid">
+            <div class="card">High Quality Products</div>
+            <div class="card">Modern Aesthetic Design</div>
+            <div class="card">Worldwide Vision</div>
+        </div>
+    </section>
+
+    <br>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact">
+            Email: your@email.com <br>
+            Phone: +82-000-0000
+        </div>
+    </section>
+
+</div>
 
 <footer>
-    © 2026 Artistic World. All rights reserved.
+    © 2026 Artistic World
 </footer>
 
 </body>
