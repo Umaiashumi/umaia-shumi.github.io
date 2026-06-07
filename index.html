@@ -10,14 +10,14 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f8f8f8;
+      background: #f4f4f4;
     }
 
     header {
       background: #111;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
     }
 
     nav {
@@ -38,13 +38,8 @@
 
     .hero {
       text-align: center;
-      padding: 60px 20px;
+      padding: 50px;
       background: linear-gradient(to right, #ffecd2, #fcb69f);
-    }
-
-    .hero h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
     }
 
     .section {
@@ -54,16 +49,35 @@
 
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
       padding: 20px;
     }
 
     .card {
       background: white;
-      padding: 20px;
       border-radius: 10px;
+      padding: 15px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .price {
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px;
+      background: green;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
     }
 
     footer {
@@ -71,16 +85,6 @@
       color: white;
       text-align: center;
       padding: 20px;
-    }
-
-    a.button {
-      display: inline-block;
-      padding: 10px 20px;
-      background: black;
-      color: white;
-      text-decoration: none;
-      margin-top: 10px;
-      border-radius: 5px;
     }
   </style>
 
@@ -90,45 +94,56 @@
 
 <header>
   <h1>Artistic World</h1>
-  <p>Premium Korean Beauty • Elegant Fashion • Custom Art & Calligraphy</p>
+  <p>Premium Korean Beauty • Fashion • Custom Art</p>
 </header>
 
 <nav>
-  <a href="#home">Home</a>
-  <a href="#products">Products</a>
+  <a href="#products">Shop</a>
   <a href="#about">About</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<section class="hero" id="home">
-  <h1>Discover Beauty & Creativity</h1>
-  <p>Authentic Korean cosmetics, stylish fashion, and personalized art services</p>
-  <a href="#products" class="button">Explore Products</a>
+<section class="hero">
+  <h2>Welcome to Artistic World</h2>
+  <p>Shop Korean cosmetics, fashion & custom art</p>
 </section>
 
 <section class="section" id="products">
-  <h2>Our Products & Services</h2>
+  <h2>Shop Products</h2>
 
   <div class="products">
-    <div class="card">
-      <h3>Korean Cosmetics</h3>
-      <p>Authentic skincare & beauty products for glowing skin</p>
-    </div>
 
 ```
 <div class="card">
-  <h3>Fashion Clothes</h3>
-  <p>Modern, elegant and trendy clothing collections</p>
+  <img src="https://via.placeholder.com/300" alt="Cosmetics">
+  <h3>Korean Skincare Set</h3>
+  <p>High-quality skincare products</p>
+  <p class="price">$25</p>
+  <a class="btn" href="https://wa.me/8801406749267?text=I%20want%20to%20order%20Korean%20Skincare%20Set">Order on WhatsApp</a>
 </div>
 
 <div class="card">
-  <h3>Handicrafts</h3>
-  <p>Unique handmade decorative and gift items</p>
+  <img src="https://via.placeholder.com/300" alt="Clothes">
+  <h3>Fashion Dress</h3>
+  <p>Stylish and trendy outfit</p>
+  <p class="price">$40</p>
+  <a class="btn" href="https://wa.me/8801406749267?text=I%20want%20to%20order%20Fashion%20Dress">Order on WhatsApp</a>
 </div>
 
 <div class="card">
-  <h3>Art & Calligraphy</h3>
-  <p>Custom paintings and beautiful calligraphy services</p>
+  <img src="https://via.placeholder.com/300" alt="Art">
+  <h3>Custom Painting</h3>
+  <p>Personalized artwork</p>
+  <p class="price">$50</p>
+  <a class="btn" href="https://wa.me/8801406749267?text=I%20want%20to%20order%20Custom%20Painting">Order on WhatsApp</a>
+</div>
+
+<div class="card">
+  <img src="https://via.placeholder.com/300" alt="Calligraphy">
+  <h3>Calligraphy Art</h3>
+  <p>Beautiful handwritten designs</p>
+  <p class="price">$30</p>
+  <a class="btn" href="https://wa.me/8801406749267?text=I%20want%20to%20order%20Calligraphy%20Art">Order on WhatsApp</a>
 </div>
 ```
 
@@ -138,31 +153,19 @@
 <section class="section" id="about">
   <h2>About Artistic World</h2>
   <p>
-    Artistic World is a modern lifestyle brand dedicated to bringing together beauty, fashion, and creativity. 
-    We specialize in authentic Korean cosmetics that enhance natural beauty, along with carefully selected 
-    fashion pieces that reflect elegance and contemporary style.
-  </p>
-  <p>
-    Beyond products, we celebrate art. Our handcrafted collections and custom-made artworks include 
-    painting and calligraphy services designed to add a personal and artistic touch to your home or as 
-    meaningful gifts. Each piece is created with passion, precision, and a commitment to quality.
-  </p>
-  <p>
-    At Artistic World, we aim to deliver not just products, but a complete aesthetic experience — 
-    where beauty meets creativity.
+    Artistic World is your destination for authentic Korean cosmetics, elegant fashion, and creative art services.
+    We provide high-quality products and custom artwork including painting and calligraphy.
   </p>
 </section>
 
 <section class="section" id="contact">
-  <h2>Contact Us</h2>
+  <h2>Contact</h2>
   <p>📞 <a href="tel:+8801406749267">+88 01406 749267</a></p>
   <p>📧 <a href="mailto:umaiashumi27@gmail.com">umaiashumi27@gmail.com</a></p>
-  <p>We are available for orders, custom art requests, and inquiries.</p>
 </section>
 
 <footer>
   <p>© 2026 Artistic World</p>
-  <p>Premium Korean Cosmetics | Fashion | Custom Art & Calligraphy</p>
 </footer>
 
 </body>
