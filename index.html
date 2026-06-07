@@ -11,114 +11,116 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0f0f10; /* black base */
-    color: #e5e7eb;
+    color: #1f2937;
 }
 
-/* ===== CENTER LAYOUT FIX ===== */
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 20px;
-}
-
-/* ===== NAVBAR ===== */
+/* ===== NAV ===== */
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(15,15,16,0.9);
+    background: rgba(255,255,255,0.9);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid #1f2937;
+    border-bottom: 1px solid #e5e7eb;
     z-index: 1000;
 }
 
-.nav-inner {
+.nav {
     max-width: 1100px;
     margin: auto;
     padding: 14px 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
-header h1 {
+.nav h1 {
     font-size: 18px;
-    color: #60a5fa; /* sky accent */
+    color: #2563eb;
 }
 
 .cart-btn {
     background: #2563eb;
-    border: none;
     color: white;
+    border: none;
     padding: 8px 14px;
     border-radius: 8px;
-    cursor: pointer;
 }
 
-/* ===== HERO ===== */
+/* ===== LAYER 1 (HERO - SOFT DARK BLUE) ===== */
 .hero {
-    height: 85vh;
+    height: 90vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    background: radial-gradient(circle at top, #111827, #0f0f10);
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
 }
 
 .hero h2 {
-    font-size: 48px;
-    color: #ffffff;
+    font-size: 52px;
 }
 
 .hero p {
-    color: #9ca3af;
+    color: #cbd5e1;
 }
 
-/* ===== SECTIONS ===== */
-.section {
-    padding: 80px 0;
+/* ===== LAYER 2 (SHOP - WHITE CLEAN) ===== */
+.shop {
+    background: #ffffff;
+    padding: 80px 10%;
 }
 
-.section h2 {
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-/* ===== GRID ===== */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
-/* ===== CARD ===== */
 .card {
-    background: #111827;
-    border: 1px solid #1f2937;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 15px;
     border-radius: 14px;
-    padding: 18px;
+    text-align: center;
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    border-color: #3b82f6;
+    transform: translateY(-5px);
+    border-color: #2563eb;
 }
 
-/* ===== BUTTON ===== */
 button {
     background: #2563eb;
     color: white;
     border: none;
     padding: 10px;
     border-radius: 8px;
-    cursor: pointer;
     margin-top: 8px;
 }
 
-button:hover {
-    background: #1d4ed8;
+/* ===== LAYER 3 (INFO SECTIONS - SOFT COLORS) ===== */
+.section {
+    padding: 80px 10%;
+}
+
+.about {
+    background: #f0f9ff; /* light sky */
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.features {
+    background: #fef3c7; /* soft yellow */
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.contact {
+    background: #ecfdf5; /* soft green */
+    padding: 20px;
+    border-radius: 14px;
 }
 
 /* ===== CART ===== */
@@ -126,10 +128,10 @@ button:hover {
     position: fixed;
     right: -380px;
     top: 0;
-    width: 340px;
+    width: 320px;
     height: 100%;
-    background: #0b0b0c;
-    border-left: 1px solid #1f2937;
+    background: white;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.1);
     transition: 0.3s;
     padding: 20px;
     z-index: 2000;
@@ -140,7 +142,7 @@ button:hover {
 }
 
 .cart-item {
-    border-bottom: 1px solid #1f2937;
+    border-bottom: 1px solid #eee;
     padding: 10px 0;
 }
 
@@ -152,7 +154,7 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #0f0f10;
+    background: white;
     padding: 40px;
     z-index: 3000;
 }
@@ -162,35 +164,8 @@ button:hover {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    background: #111827;
-    border: 1px solid #1f2937;
-    color: white;
+    border: 1px solid #ddd;
     border-radius: 8px;
-}
-
-/* ===== MODAL ===== */
-.modal {
-    display: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-    z-index: 4000;
-}
-
-.modal-content {
-    background: #111827;
-    width: 300px;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #1f2937;
-}
-
-.close {
-    float: right;
-    cursor: pointer;
-    color: #9ca3af;
 }
 
 </style>
@@ -200,142 +175,88 @@ button:hover {
 
 <!-- NAV -->
 <header>
-<div class="nav-inner">
-    <h1>Artistic World</h1>
-    <button class="cart-btn" onclick="toggleCart()">Cart 🛒 (<span id="count">0</span>)</button>
+<div class="nav">
+<h1>Artistic World</h1>
+<button class="cart-btn" onclick="toggleCart()">Cart 🛒 (<span id="count">0</span>)</button>
 </div>
 </header>
 
-<!-- HERO -->
+<!-- LAYER 1 -->
 <section class="hero">
 <div>
-    <h2>Artistic World</h2>
-    <p>Premium lifestyle store with modern dark aesthetic</p>
+<h2>Artistic World</h2>
+<p>Modern lifestyle shop with premium design</p>
 </div>
 </section>
 
-<div class="container">
-
-<!-- SHOP -->
-<section class="section">
+<!-- LAYER 2 -->
+<section class="shop">
 <h2>Shop</h2>
+
 <div class="grid">
 
 <div class="card">
 <h3>Clothing Set</h3>
 <p>$29.99</p>
-<button onclick="addToCart('Clothing Set',29.99)">Add to Cart</button>
-<button onclick="openModal('Clothing Set',29.99)">View</button>
+<button onclick="add('Clothing Set',29.99)">Add to Cart</button>
 </div>
 
 <div class="card">
-<h3>Korean Skincare</h3>
+<h3>Skincare</h3>
 <p>$19.99</p>
-<button onclick="addToCart('Skincare',19.99)">Add to Cart</button>
-<button onclick="openModal('Skincare',19.99)">View</button>
+<button onclick="add('Skincare',19.99)">Add to Cart</button>
 </div>
 
 </div>
 </section>
 
-<!-- FEATURES -->
-<section class="section">
-<h2>Features</h2>
-<div class="card">
-High quality products, modern aesthetic design, and global delivery vision.
-</div>
-</section>
-
-<!-- ABOUT -->
+<!-- LAYER 3 -->
 <section class="section">
 <h2>About</h2>
-<div class="card">
-Artistic World is a modern lifestyle brand focused on fashion, beauty, and creative products.
+<div class="about">
+Modern fashion and lifestyle brand.
 </div>
 </section>
 
-<!-- CONTACT -->
+<section class="section">
+<h2>Features</h2>
+<div class="features">
+High quality products, modern design, global vision.
+</div>
+</section>
+
 <section class="section">
 <h2>Contact</h2>
-<div class="card">
+<div class="contact">
 Email: umaiashumi27@gmail.com <br>
 Cell: +880 1406 749267
 </div>
 </section>
 
-</div>
-
 <!-- CART -->
 <div class="cart" id="cart">
 <h2>Your Cart</h2>
-<div id="cartItems"></div>
-<button onclick="checkout()">Checkout</button>
-</div>
-
-<!-- CHECKOUT -->
-<div class="checkout" id="checkout">
-<h2>Checkout</h2>
-<input id="name" placeholder="Your Name">
-<textarea id="address" placeholder="Address"></textarea>
-<button onclick="sendWhatsApp()">Place Order on WhatsApp</button>
-</div>
-
-<!-- MODAL -->
-<div class="modal" id="modal">
-<div class="modal-content">
-<span class="close" onclick="closeModal()">X</span>
-<h3 id="mName"></h3>
-<p id="mPrice"></p>
-</div>
+<div id="items"></div>
 </div>
 
 <script>
 
-let cart = [];
+let cart=[];
 
-function addToCart(name, price){
-    cart.push({name, price});
-    document.getElementById("count").innerText = cart.length;
-    renderCart();
-}
+function add(name,price){
+cart.push({name,price});
+document.getElementById("count").innerText=cart.length;
 
-function renderCart(){
-    let html = "";
-    cart.forEach(item=>{
-        html += `<div class="cart-item">${item.name} - $${item.price}</div>`;
-    });
-    document.getElementById("cartItems").innerHTML = html;
+let html="";
+cart.forEach(i=>{
+html+=`<div class="cart-item">${i.name} - $${i.price}</div>`;
+});
+
+document.getElementById("items").innerHTML=html;
 }
 
 function toggleCart(){
-    document.getElementById("cart").classList.toggle("active");
-}
-
-function checkout(){
-    document.getElementById("checkout").style.display = "block";
-}
-
-function sendWhatsApp(){
-    let name = document.getElementById("name").value;
-    let address = document.getElementById("address").value;
-
-    let message = `Order from ${name}%0AAddress: ${address}%0AItems:%0A`;
-
-    cart.forEach(item=>{
-        message += `- ${item.name} $${item.price}%0A`;
-    });
-
-    window.open(`https://wa.me/8801406749267?text=${message}`);
-}
-
-function openModal(name,price){
-    document.getElementById("modal").style.display="block";
-    document.getElementById("mName").innerText=name;
-    document.getElementById("mPrice").innerText="$"+price;
-}
-
-function closeModal(){
-    document.getElementById("modal").style.display="none";
+document.getElementById("cart").classList.toggle("active");
 }
 
 </script>
