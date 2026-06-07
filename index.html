@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Business</title>
+<title>Umaia Shop</title>
 
 <style>
 body {
@@ -13,15 +13,15 @@ body {
 
 /* HEADER */
 header {
-  background: #0a2540;
+  background: #111;
   color: white;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
 }
 
 /* NAV */
 nav {
-  background: #1c3d5a;
+  background: #333;
   padding: 10px;
   text-align: center;
 }
@@ -29,51 +29,53 @@ nav a {
   color: white;
   margin: 15px;
   text-decoration: none;
-  font-weight: bold;
 }
 
 /* HERO */
 .hero {
-  background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d') no-repeat center/cover;
+  background: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') no-repeat center/cover;
   color: white;
   padding: 100px 20px;
   text-align: center;
 }
-.hero h1 {
-  font-size: 40px;
+
+/* PRODUCTS */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+.product {
+  width: 220px;
+  margin: 15px;
+  padding: 15px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  text-align: center;
+}
+.product img {
+  width: 100%;
+  border-radius: 8px;
 }
 
-/* SECTIONS */
+/* SECTION */
 section {
   padding: 40px 20px;
   text-align: center;
 }
 
-/* SERVICES */
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.service-box {
-  width: 250px;
-  margin: 15px;
-  padding: 20px;
-  background: #f4f4f4;
-  border-radius: 8px;
-}
-
 /* CONTACT */
 .contact {
-  background: #e9ecef;
+  background: #eee;
 }
 
 /* FOOTER */
 footer {
-  background: #0a2540;
+  background: #111;
   color: white;
-  padding: 15px;
   text-align: center;
+  padding: 10px;
 }
 </style>
 </head>
@@ -81,53 +83,66 @@ footer {
 <body>
 
 <header>
-  <h1>My Business</h1>
-  <p>Professional Services You Can Trust</p>
+  <h1>Umaia Online Shop</h1>
+  <p>Korean Beauty | Fashion | Art</p>
 </header>
 
 <nav>
   <a href="#home">Home</a>
+  <a href="#products">Products</a>
   <a href="#about">About</a>
-  <a href="#services">Services</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <div class="hero" id="home">
-  <h1>Grow Your Business With Us</h1>
-  <p>We provide high-quality solutions</p>
+  <h1>Discover Korean Beauty & Style</h1>
+  <p>Cosmetics • Clothes • Handmade Art</p>
 </div>
+
+<section id="products">
+  <h2>Our Products</h2>
+  <div class="products">
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348">
+      <h3>Korean Cosmetics</h3>
+      <p>High quality skincare products</p>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd53">
+      <h3>Fashion Clothes</h3>
+      <p>Modern and stylish outfits</p>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde">
+      <h3>Wall Art</h3>
+      <p>Beautiful paintings for home</p>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2">
+      <h3>Calligraphy</h3>
+      <p>Handmade artistic designs</p>
+    </div>
+
+  </div>
+</section>
 
 <section id="about">
   <h2>About Us</h2>
-  <p>I am a business professional providing services in management, consulting, and digital solutions.</p>
-</section>
-
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="service-box">
-      <h3>Consulting</h3>
-      <p>Business and management consulting services.</p>
-    </div>
-    <div class="service-box">
-      <h3>Online Services</h3>
-      <p>Freelance and digital support solutions.</p>
-    </div>
-    <div class="service-box">
-      <h3>Support</h3>
-      <p>Reliable customer and operational support.</p>
-    </div>
-  </div>
+  <p>We sell authentic Korean cosmetics, stylish clothing, and handmade art pieces. Our mission is to bring beauty and creativity to your life.</p>
 </section>
 
 <section class="contact" id="contact">
   <h2>Contact</h2>
   <p>Email: your@email.com</p>
-  <p>Location: South Korea</p>
+  <p>WhatsApp: +82-XXX-XXXX</p>
 </section>
 
 <footer>
-  <p>© 2026 My Business | All Rights Reserved</p>
+  <p>© 2026 Umaia Shop</p>
 </footer>
 
 </body>
