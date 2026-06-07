@@ -1,122 +1,168 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Umaia Shop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artistic World</title>
 
-<style>
-body { margin:0; font-family: Arial; }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+    }
 
-/* HEADER */
-header { background:#111; color:white; text-align:center; padding:15px; }
+    header {
+      background: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
-/* NAV */
-nav { background:#333; text-align:center; padding:10px; }
-nav a { color:white; margin:15px; text-decoration:none; }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #222;
+    }
 
-/* HERO */
-.hero {
-  background:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') no-repeat center/cover;
-  color:white;
-  text-align:center;
-  padding:100px 20px;
-}
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
 
-/* PRODUCTS */
-.products { display:flex; flex-wrap:wrap; justify-content:center; padding:20px; }
-.product {
-  width:230px; margin:15px; padding:15px;
-  background:#f4f4f4; border-radius:8px; text-align:center;
-}
-.product img { width:100%; border-radius:8px; }
+    nav a:hover {
+      background: #555;
+    }
 
-/* BUTTON */
-.btn {
-  display:inline-block;
-  background:green;
-  color:white;
-  padding:10px 15px;
-  margin-top:10px;
-  text-decoration:none;
-  border-radius:5px;
-}
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+    }
 
-/* CONTACT */
-<section class="contact" id="contact">
-  <h2>Contact Us</h2>
-  <p>📞 Order Now: +88 01406 749267</p>
-  <p>📧 Email: umaiashumi27@gmail.com</p>
-  <p>We are available for orders, custom art requests, and inquiries.</p>
-</section>
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
 
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-/* FOOTER */
-footer { background:#111; color:white; text-align:center; padding:10px; }
-</style>
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: black;
+      color: white;
+      text-decoration: none;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+  </style>
+
 </head>
 
 <body>
 
 <header>
   <h1>Artistic World</h1>
-  <p>Korean Cosmetic | Fashionable dress | Arts and Painting</p>
+  <p>Premium Korean Beauty • Elegant Fashion • Custom Art & Calligraphy</p>
 </header>
 
 <nav>
   <a href="#home">Home</a>
   <a href="#products">Products</a>
+  <a href="#about">About</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<div class="hero" id="home">
-  <h1>Shop Korean Beauty & Style</h1>
-  <p>Order easily via WhatsApp</p>
+<section class="hero" id="home">
+  <h1>Discover Beauty & Creativity</h1>
+  <p>Authentic Korean cosmetics, stylish fashion, and personalized art services</p>
+  <a href="#products" class="button">Explore Products</a>
+</section>
+
+<section class="section" id="products">
+  <h2>Our Products & Services</h2>
+
+  <div class="products">
+    <div class="card">
+      <h3>Korean Cosmetics</h3>
+      <p>Authentic skincare & beauty products for glowing skin</p>
+    </div>
+
+```
+<div class="card">
+  <h3>Fashion Clothes</h3>
+  <p>Modern, elegant and trendy clothing collections</p>
 </div>
 
-<section id="products">
-  <h2 style="text-align:center;">Products</h2>
-  <div class="products">
+<div class="card">
+  <h3>Handicrafts</h3>
+  <p>Unique handmade decorative and gift items</p>
+</div>
 
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348">
-      <h3>Korean Cream</h3>
-      <p>$20</p>
-      <a class="btn" href="https://wa.me/821000000000?text=I want to buy Korean Cream">Buy Now</a>
-    </div>
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd53">
-      <h3>Fashion Dress</h3>
-      <p>$35</p>
-      <a class="btn" href="https://wa.me/821000000000?text=I want to buy Fashion Dress">Buy Now</a>
-    </div>
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde">
-      <h3>Wall Painting</h3>
-      <p>$50</p>
-      <a class="btn" href="https://wa.me/821000000000?text=I want to buy Wall Painting">Buy Now</a>
-    </div>
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2">
-      <h3>Calligraphy Art</h3>
-      <p>$25</p>
-      <a class="btn" href="https://wa.me/821000000000?text=I want to buy Calligraphy Art">Buy Now</a>
-    </div>
+<div class="card">
+  <h3>Art & Calligraphy</h3>
+  <p>Custom paintings and beautiful calligraphy services</p>
+</div>
+```
 
   </div>
 </section>
 
-<section class="contact" id="contact">
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
-  <p>WhatsApp: +82-XXXXXXXXXX</p>
+<section class="section" id="about">
+  <h2>About Artistic World</h2>
+  <p>
+    Artistic World is a modern lifestyle brand dedicated to bringing together beauty, fashion, and creativity. 
+    We specialize in authentic Korean cosmetics that enhance natural beauty, along with carefully selected 
+    fashion pieces that reflect elegance and contemporary style.
+  </p>
+  <p>
+    Beyond products, we celebrate art. Our handcrafted collections and custom-made artworks include 
+    painting and calligraphy services designed to add a personal and artistic touch to your home or as 
+    meaningful gifts. Each piece is created with passion, precision, and a commitment to quality.
+  </p>
+  <p>
+    At Artistic World, we aim to deliver not just products, but a complete aesthetic experience — 
+    where beauty meets creativity.
+  </p>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p>📞 <a href="tel:+8801406749267">+88 01406 749267</a></p>
+  <p>📧 <a href="mailto:umaiashumi27@gmail.com">umaiashumi27@gmail.com</a></p>
+  <p>We are available for orders, custom art requests, and inquiries.</p>
 </section>
 
 <footer>
-  <p>© 2026 Umaia Shop</p>
+  <p>© 2026 Artistic World</p>
+  <p>Premium Korean Cosmetics | Fashion | Custom Art & Calligraphy</p>
 </footer>
 
 </body>
