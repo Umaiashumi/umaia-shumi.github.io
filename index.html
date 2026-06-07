@@ -10,28 +10,28 @@
 /* ===== BASE ===== */
 body {
     margin: 0;
-    font-family: "Arial", sans-serif;
-    background: #f4f6f8;
-    color: #2b2b2b;
+    font-family: Arial, sans-serif;
+    background: #f6f1e7;
+    color: #2f2f2f;
 }
 
-/* ===== TOP NAV ===== */
+/* ===== HEADER ===== */
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     padding: 14px 40px;
     z-index: 1000;
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e6dfd2;
 }
 
 header h1 {
     font-size: 18px;
-    color: #3b5bdb;
+    color: #3f6f58;
     letter-spacing: 1px;
 }
 
@@ -43,10 +43,10 @@ nav a {
 }
 
 nav a:hover {
-    color: #3b5bdb;
+    color: #3f6f58;
 }
 
-/* ===== LAYER 1 (HERO) ===== */
+/* ===== HERO (LAYER 1) ===== */
 .hero {
     height: 100vh;
     display: flex;
@@ -55,85 +55,78 @@ nav a:hover {
     justify-content: center;
     text-align: center;
 
-    background: linear-gradient(135deg, #e9f0ff, #f7f9fc);
+    background: linear-gradient(135deg, #f6f1e7, #e9efe6);
 }
 
 .hero h2 {
     font-size: 52px;
-    color: #1f2a44;
+    color: #2f3e34;
     margin: 0;
 }
 
 .hero p {
     max-width: 600px;
-    color: #6b7280;
+    color: #6b6b6b;
     margin-top: 12px;
 }
 
-/* soft glow line */
-.hero::after {
-    content: "";
-    width: 120px;
-    height: 2px;
-    background: #3b5bdb;
-    margin-top: 25px;
-}
-
-/* ===== LAYER 2 CONTAINER ===== */
+/* ===== LAYER 2 ===== */
 .layer2 {
     background: #ffffff;
     padding: 80px 10%;
+    border-top: 1px solid #e6dfd2;
 }
 
-/* SECTION TITLES */
+/* SECTION TITLE */
 .section-title {
     font-size: 26px;
-    color: #1f2a44;
+    color: #2f3e34;
     margin-bottom: 20px;
 }
 
-/* GRID CARDS */
+/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
 }
 
+/* CARD */
 .card {
-    background: #f8fafc;
+    background: #f9f7f2;
     padding: 20px;
     border-radius: 14px;
-    border: 1px solid #eaeaea;
+    border: 1px solid #e7e0d5;
     transition: 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-6px);
-    background: #eef3ff;
+    background: #eaf3ea;
 }
 
-/* ABOUT BOX */
+/* ABOUT */
 .about {
-    background: #f8fafc;
+    background: #f9f7f2;
     padding: 25px;
     border-radius: 14px;
-    border: 1px solid #eaeaea;
+    border: 1px solid #e7e0d5;
     color: #555;
 }
 
 /* CONTACT */
 .contact {
-    background: #eef3ff;
+    background: #eaf3ea;
     padding: 30px;
     border-radius: 14px;
-    color: #2b2b2b;
+    color: #2f2f2f;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     padding: 25px;
-    background: #f1f5f9;
+    background: #f2eee6;
     color: #777;
 }
 
@@ -161,7 +154,6 @@ footer {
 <!-- ===== LAYER 2 ===== -->
 <div class="layer2">
 
-    <!-- ABOUT -->
     <section id="about">
         <h2 class="section-title">About</h2>
         <div class="about">
@@ -171,7 +163,6 @@ footer {
 
     <br>
 
-    <!-- SHOP -->
     <section id="shop">
         <h2 class="section-title">Shop</h2>
         <div class="grid">
@@ -183,7 +174,6 @@ footer {
 
     <br>
 
-    <!-- FEATURES -->
     <section id="features">
         <h2 class="section-title">Features</h2>
         <div class="grid">
@@ -195,7 +185,6 @@ footer {
 
     <br>
 
-    <!-- CONTACT -->
     <section id="contact">
         <h2 class="section-title">Contact</h2>
         <div class="contact">
