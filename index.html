@@ -12,42 +12,7 @@ body {
     background: #f4f4f4;
 }
 
-/* HEADER */
-header {
-    background: #000;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 30px;
-}
-
-/* LOGO */
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 60px;
-    height: 60px;
-    margin-right: 10px;
-    border-radius: 10px;
-}
-
-/* WEBSITE NAME */
-.logo h1 {
-    font-size: 52px;
-    margin: 0;
-    font-weight: 900; /* BOLD */
-    letter-spacing: 2px;
-}
-
-.logo span {
-    color: #ff4da6; /* pink highlight */
-}
-
-/* NAVIGATION */
+/* NAV LINKS */
 nav a {
     color: white;
     margin: 0 15px;
@@ -56,10 +21,10 @@ nav a {
 }
 
 nav a:hover {
-    color pink: #ff4da6;
+    color: #ff4da6;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
     text-align: center;
     padding: 60px 20px;
@@ -68,26 +33,6 @@ nav a:hover {
 
 .hero h2 {
     font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    color: #555;
-}
-
-/* BUTTON */
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: black;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background: #ff4da6;
 }
 
 /* ABOUT */
@@ -102,14 +47,6 @@ nav a:hover {
     margin: auto;
     line-height: 1.6;
     color: #555;
-}
-
-/* FOOTER */
-footer {
-    background: black;
-    color: white;
-    text-align: center;
-    padding: 15px;
 }
 
 /* FLOAT BUTTONS */
@@ -131,35 +68,45 @@ footer {
 .whatsapp { background: #25D366; }
 .email { background: #007BFF; }
 
+/* FOOTER */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
-    <div class="logo">
-        <!-- YOUR LOGO -->
-        <img src="logo.png" alt="JS Palace Logo">
+<!-- ✅ NEW HEADER WITH YOUR LOGO -->
+<header style="background:black; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px 30px;">
 
-        <!-- WEBSITE NAME -->
-        <h1><span>JS</span> Palace</h1>
-    </div>
+  <div style="display:flex; align-items:center;">
+    
+    <img src="y.png" alt="JS Palace Logo" 
+         style="width:60px; height:60px; border-radius:10px; margin-right:10px;">
 
-    <!-- MENU -->
-    <nav>
-        <a href="#">Home</a>
-        <a href="#shop">Shop</a>
-        <a href="#cart">Cart</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <h1 style="margin:0; font-size:32px; font-weight:900; letter-spacing:2px;">
+      <span style="color:#ff4da6;">JS</span> Palace
+    </h1>
+
+  </div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#cart">Cart</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
 </header>
 
 <!-- HERO -->
 <section class="hero">
     <h2>Welcome to JS Palace</h2>
     <p>Fashion • Korean Cosmetics • Artistic Services</p>
-    <a href="#shop" class="btn">Shop Now</a>
 </section>
 
 <!-- ABOUT -->
@@ -167,15 +114,11 @@ footer {
     <h2>About JS Palace</h2>
 
     <p>
-        JS Palace is a modern online store founded in 2022 with a vision to bring style, creativity, and quality together in one place. We specialize in trendy clothing, authentic Korean cosmetics, and unique artistic services that reflect elegance and individuality.
+        JS Palace is a modern online store founded in 2022 with a vision to bring style, creativity, and quality together in one place.
     </p>
 
     <p>
-        Our clothing collection is carefully selected to match current fashion trends while ensuring comfort and affordability. Alongside fashion, we offer Korean beauty products known for their innovation and effectiveness.
-    </p>
-
-    <p>
-        What makes JS Palace truly unique is our artistic touch. We provide customized calligraphy and creative design services for gifts and special occasions.
+        We specialize in trendy clothing, authentic Korean cosmetics, and unique artistic services like calligraphy.
     </p>
 </section>
 
