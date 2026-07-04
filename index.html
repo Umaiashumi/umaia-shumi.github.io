@@ -1,265 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Artistic World Shop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Palace</title>
 
-<style>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
 
-/* ===== GLOBAL ===== */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #1f2937;
-}
+        header {
+            background: #222;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
 
-/* ===== NAV ===== */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(255,255,255,0.9);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #e5e7eb;
-    z-index: 1000;
-}
+        header h1 {
+            margin: 0;
+        }
 
-.nav {
-    max-width: 1100px;
-    margin: auto;
-    padding: 14px 20px;
-    display: flex;
-    justify-content: space-between;
-}
+        nav {
+            background: #444;
+            padding: 10px;
+            text-align: center;
+        }
 
-.nav h1 {
-    font-size: 18px;
-    color: #2563eb;
-}
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.cart-btn {
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 8px;
-}
+        nav a:hover {
+            color: #ffd700;
+        }
 
-/* ===== LAYER 1 (HERO - SOFT DARK BLUE) ===== */
-.hero {
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(135deg, #0f172a, #1e3a8a);
-    color: white;
-}
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
 
-.hero h2 {
-    font-size: 52px;
-}
-
-.hero p {
-    color: #cbd5e1;
-}
-
-/* ===== LAYER 2 (SHOP - WHITE CLEAN) ===== */
-.shop {
-    background: #ffffff;
-    padding: 80px 10%;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
-    padding: 15px;
-    border-radius: 14px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #2563eb;
-}
-
-button {
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 8px;
-}
-
-/* ===== LAYER 3 (INFO SECTIONS - SOFT COLORS) ===== */
-.section {
-    padding: 80px 10%;
-}
-
-.about {
-    background: #f0f9ff; /* light sky */
-    padding: 20px;
-    border-radius: 14px;
-}
-
-.features {
-    background: #fef3c7; /* soft yellow */
-    padding: 20px;
-    border-radius: 14px;
-}
-
-.contact {
-    background: #ecfdf5; /* soft green */
-    padding: 20px;
-    border-radius: 14px;
-}
-
-/* ===== CART ===== */
-.cart {
-    position: fixed;
-    right: -380px;
-    top: 0;
-    width: 320px;
-    height: 100%;
-    background: white;
-    box-shadow: -5px 0 20px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    padding: 20px;
-    z-index: 2000;
-}
-
-.cart.active {
-    right: 0;
-}
-
-.cart-item {
-    border-bottom: 1px solid #eee;
-    padding: 10px 0;
-}
-
-/* ===== CHECKOUT ===== */
-.checkout {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: white;
-    padding: 40px;
-    z-index: 3000;
-}
-
-.checkout input,
-.checkout textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-</style>
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- NAV -->
-<header>
-<div class="nav">
-<h1>Artistic World</h1>
-<button class="cart-btn" onclick="toggleCart()">Cart 🛒 (<span id="count">0</span>)</button>
-</div>
-</header>
+    <header>
+        <h1>JS Palace</h1>
+        <p>Welcome to JS Palace Website</p>
+    </header>
 
-<!-- LAYER 1 -->
-<section class="hero">
-<div>
-<h2>Artistic World</h2>
-<p>Modern lifestyle shop with premium design</p>
-</div>
-</section>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
 
-<!-- LAYER 2 -->
-<section class="shop">
-<h2>Shop</h2>
+    <div class="container">
+        <h2>Welcome!</h2>
+        <p>This is your website JS Palace. You can edit this content anytime.</p>
+    </div>
 
-<div class="grid">
-
-<div class="card">
-<h3>Clothing Set</h3>
-<p>$29.99</p>
-<button onclick="add('Clothing Set',29.99)">Add to Cart</button>
-</div>
-
-<div class="card">
-<h3>Skincare</h3>
-<p>$19.99</p>
-<button onclick="add('Skincare',19.99)">Add to Cart</button>
-</div>
-
-</div>
-</section>
-
-<!-- LAYER 3 -->
-<section class="section">
-<h2>About</h2>
-<div class="about">
-Modern fashion and lifestyle brand.
-</div>
-</section>
-
-<section class="section">
-<h2>Features</h2>
-<div class="features">
-High quality products, modern design, global vision.
-</div>
-</section>
-
-<section class="section">
-<h2>Contact</h2>
-<div class="contact">
-Email: umaiashumi27@gmail.com <br>
-Cell: +880 1406 749267
-</div>
-</section>
-
-<!-- CART -->
-<div class="cart" id="cart">
-<h2>Your Cart</h2>
-<div id="items"></div>
-</div>
-
-<script>
-
-let cart=[];
-
-function add(name,price){
-cart.push({name,price});
-document.getElementById("count").innerText=cart.length;
-
-let html="";
-cart.forEach(i=>{
-html+=`<div class="cart-item">${i.name} - $${i.price}</div>`;
-});
-
-document.getElementById("items").innerHTML=html;
-}
-
-function toggleCart(){
-document.getElementById("cart").classList.toggle("active");
-}
-
-</script>
+    <footer>
+        <p>© 2026 JS Palace. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
