@@ -1,159 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JS Palace</title>
+<!-- HERO SECTION -->
+<section style="display:flex; align-items:center; justify-content:space-between; padding:50px; background:linear-gradient(to right,#ffe6f0,#fff);">
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-}
+  <!-- LEFT IMAGE -->
+  <div>
+    <img src="y.png" style="width:300px; border-radius:20px;">
+  </div>
 
-/* NAV LINKS */
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #ff4da6;
-}
-
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: white;
-}
-
-.hero h2 {
-    font-size: 40px;
-}
-
-/* ABOUT */
-#about {
-    padding: 50px;
-    background: #fff;
-    text-align: center;
-}
-
-#about p {
-    max-width: 800px;
-    margin: auto;
-    line-height: 1.6;
-    color: #555;
-}
-
-/* FLOAT BUTTONS */
-.float-buttons {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
-
-.float-buttons a {
-    display: block;
-    margin-top: 10px;
-    padding: 12px 15px;
-    border-radius: 30px;
-    color: white;
-    text-decoration: none;
-}
-
-.whatsapp { background: #25D366; }
-.email { background: #007BFF; }
-
-/* FOOTER */
-footer {
-    background: black;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-</style>
-</head>
-
-<body>
-
-<!-- ✅ NEW HEADER WITH YOUR LOGO -->
-<header style="background:black; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px 40px;">
-
-  <!-- LOGO + NAME -->
-  <div style="display:flex; align-items:center;">
-    
-    <!-- 5X BIG LOGO -->
-    <img src="y.png" alt="JS Palace Logo" 
-         style="width:300px; height:300px; object-fit:cover; border-radius:20px; margin-right:20px;">
-
-    <!-- WEBSITE NAME -->
-    <h1 style="margin:0; font-size:48px; font-weight:900; letter-spacing:3px;">
-      <span style="color:#ff4da6;">JS</span> Palace
+  <!-- TEXT -->
+  <div style="max-width:500px;">
+    <h1 style="font-size:60px; margin:0;">
+      <span style="color:#ff2e88;">JS</span> PALACE
     </h1>
+
+    <p style="letter-spacing:3px;">FASHION • BEAUTY • ART</p>
+
+    <p style="color:#555;">
+      Your one-stop online store for trendy clothing, authentic Korean cosmetics,
+      and artistic services like calligraphy.
+    </p>
+
+    <button style="background:#ff2e88; color:white; padding:15px 25px; border:none; border-radius:30px; font-size:16px;">
+      SHOP NOW
+    </button>
+  </div>
+
+  <!-- RIGHT IMAGE -->
+  <div>
+    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" style="width:300px; border-radius:20px;">
+  </div>
+
+</section>
+
+<!-- CATEGORY SECTION -->
+<section style="display:flex; justify-content:space-around; padding:40px; background:#f8f8f8; text-align:center;">
+
+  <div>
+    <h3>👗 CLOTHING</h3>
+    <p>Trendy & Comfortable Styles</p>
+  </div>
+
+  <div>
+    <h3>💄 KOREAN COSMETICS</h3>
+    <p>Authentic Beauty Products</p>
+  </div>
+
+  <div>
+    <h3>✍️ ARTISTIC SERVICES</h3>
+    <p>Calligraphy & Design</p>
+  </div>
+
+</section>
+
+<!-- ABOUT SECTION -->
+<section style="padding:50px;">
+
+  <h2 style="font-size:32px;">
+    ABOUT <span style="color:#ff2e88;">JS PALACE</span>
+  </h2>
+
+  <div style="display:flex; gap:30px; margin-top:30px;">
+
+    <!-- TEXT -->
+    <div style="flex:1; color:#555; line-height:1.6;">
+      <p>
+        JS Palace is a modern online store founded in 2022 with a vision to bring style,
+        creativity, and quality together in one place.
+      </p>
+
+      <p>
+        We specialize in trendy clothing, authentic Korean cosmetics,
+        and unique artistic services that reflect elegance and individuality.
+      </p>
+
+      <p>
+        Our goal is to deliver quality products and creative experiences
+        that inspire confidence and self-expression.
+      </p>
+    </div>
+
+    <!-- IMAGES -->
+    <div style="flex:1; display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+      <img src="https://images.unsplash.com/photo-1521334884684-d80222895322" style="width:100%; border-radius:15px;">
+      <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348" style="width:100%; border-radius:15px;">
+      <img src="https://images.unsplash.com/photo-1585386959984-a41552231658" style="width:100%; border-radius:15px;">
+      <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" style="width:100%; border-radius:15px;">
+    </div>
 
   </div>
 
-  <!-- MENU -->
-  <nav style="display:flex; align-items:center;">
-    <a href="#" style="color:white; margin:0 15px; text-decoration:none;">Home</a>
-    <a href="#shop" style="color:white; margin:0 15px; text-decoration:none;">Shop</a>
-    <a href="#cart" style="color:white; margin:0 15px; text-decoration:none;">Cart</a>
-    <a href="#contact" style="color:white; margin:0 15px; text-decoration:none;">Contact</a>
-  </nav>
-
-</header>
-
-<!-- HERO -->
-<section class="hero">
-    <h2>Welcome to JS Palace</h2>
-    <p>Fashion • Korean Cosmetics • Artistic Services</p>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-    <h2>About JS Palace</h2>
+<!-- FEATURES BAR -->
+<section style="background:black; color:white; display:flex; justify-content:space-around; padding:20px; text-align:center;">
 
-    <p>
-        JS Palace is a modern online store founded in 2022 with a vision to bring style, creativity, and quality together in one place.
-    </p>
+  <div>🌍 Worldwide Shipping</div>
+  <div>🔒 100% Secure Payment</div>
+  <div>🔄 Easy Returns</div>
+  <div>❤️ Customer Satisfaction</div>
 
-    <p>
-        We specialize in trendy clothing, authentic Korean cosmetics, and unique artistic services like calligraphy.
-    </p>
 </section>
-
-<!-- SHOP -->
-<section id="shop" class="hero">
-    <h2>Shop</h2>
-    <p>Products coming soon...</p>
-</section>
-
-<!-- CART -->
-<section id="cart" class="hero">
-    <h2>Cart</h2>
-    <p>Your cart is empty.</p>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="hero">
-    <h2>Contact</h2>
-    <p>Email: youremail@example.com</p>
-</section>
-
-<!-- FLOAT BUTTONS -->
-<div class="float-buttons">
-    <a href="https://wa.me/YOURNUMBER" class="whatsapp">WhatsApp</a>
-    <a href="mailto:youremail@example.com" class="email">Email</a>
-</div>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 JS Palace. All rights reserved.</p>
-</footer>
-
-</body>
-</html>
