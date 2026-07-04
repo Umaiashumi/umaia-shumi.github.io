@@ -1,43 +1,212 @@
-<!-- Navigation Menu -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS Palace</title>
 
-<nav style="position:fixed; top:0; width:100%; background:#222; padding:10px; text-align:center; z-index:999;">
-  <a href="#" style="color:white; margin:0 15px; text-decoration:none;">Home</a>
-  <a href="#shop" style="color:white; margin:0 15px; text-decoration:none;">Shop</a>
-  <a href="#cart" style="color:white; margin:0 15px; text-decoration:none;">Cart</a>
-  <a href="#contact" style="color:white; margin:0 15px; text-decoration:none;">Contact</a>
-</nav>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
 
-<!-- Floating Buttons -->
+/* HEADER */
+header {
+    background: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
 
-<div style="position:fixed; bottom:20px; right:20px; display:flex; flex-direction:column; gap:10px; z-index:999;">
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+}
 
-  <!-- WhatsApp -->
+.logo img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
 
-<a href="https://wa.me/YOURNUMBER" target="_blank"
-  style="background:#25D366; color:white; padding:12px 15px; border-radius:50px; text-decoration:none; text-align:center;">
-WhatsApp </a>
+/* WEBSITE NAME */
+.logo h1 {
+    font-size: 32px;
+    margin: 0;
+    font-weight: 900; /* BOLD */
+    letter-spacing: 2px;
+}
 
-  <!-- Email -->
+.logo span {
+    color: #ff4da6; /* pink highlight */
+}
 
-<a href="mailto:youremail@example.com"
-  style="background:#007BFF; color:white; padding:12px 15px; border-radius:50px; text-decoration:none; text-align:center;">
-Email </a>
+/* NAVIGATION */
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
+nav a:hover {
+    color: #ff4da6;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #555;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #ff4da6;
+}
+
+/* ABOUT */
+#about {
+    padding: 50px;
+    background: #fff;
+    text-align: center;
+}
+
+#about p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* FLOAT BUTTONS */
+.float-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.float-buttons a {
+    display: block;
+    margin-top: 10px;
+    padding: 12px 15px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.whatsapp { background: #25D366; }
+.email { background: #007BFF; }
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <!-- YOUR LOGO -->
+        <img src="U.png" alt="JS Palace Logo">
+
+        <!-- WEBSITE NAME -->
+        <h1><span>JS</span> Palace</h1>
+    </div>
+
+    <!-- MENU -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#cart">Cart</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h2>Welcome to JS Palace</h2>
+    <p>Fashion • Korean Cosmetics • Artistic Services</p>
+    <a href="#shop" class="btn">Shop Now</a>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About JS Palace</h2>
+
+    <p>
+        JS Palace is a modern online store founded in 2022 with a vision to bring style, creativity, and quality together in one place. We specialize in trendy clothing, authentic Korean cosmetics, and unique artistic services that reflect elegance and individuality.
+    </p>
+
+    <p>
+        Our clothing collection is carefully selected to match current fashion trends while ensuring comfort and affordability. Alongside fashion, we offer Korean beauty products known for their innovation and effectiveness.
+    </p>
+
+    <p>
+        What makes JS Palace truly unique is our artistic touch. We provide customized calligraphy and creative design services for gifts and special occasions.
+    </p>
+</section>
+
+<!-- SHOP -->
+<section id="shop" class="hero">
+    <h2>Shop</h2>
+    <p>Products coming soon...</p>
+</section>
+
+<!-- CART -->
+<section id="cart" class="hero">
+    <h2>Cart</h2>
+    <p>Your cart is empty.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="hero">
+    <h2>Contact</h2>
+    <p>Email: youremail@example.com</p>
+</section>
+
+<!-- FLOAT BUTTONS -->
+<div class="float-buttons">
+    <a href="https://wa.me/YOURNUMBER" class="whatsapp">WhatsApp</a>
+    <a href="mailto:youremail@example.com" class="email">Email</a>
 </div>
 
-<!-- Dummy Sections (for navigation scroll) -->
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 JS Palace. All rights reserved.</p>
+</footer>
 
-<section id="shop" style="padding:60px; text-align:center;">
-  <h2>Shop</h2>
-  <p>Your products will appear here.</p>
-</section>
-
-<section id="cart" style="padding:60px; text-align:center;">
-  <h2>Cart</h2>
-  <p>Your cart is empty.</p>
-</section>
-
-<section id="contact" style="padding:60px; text-align:center;">
-  <h2>Contact</h2>
-  <p>Email: youremail@example.com</p>
-</section>
+</body>
+</html>
